@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>aBay Online Auction</title>
+    <!-- Load local CSS -->
+ 	<link rel="stylesheet" href="css/index.css">
+ 	<link rel="stylesheet" href="css/jquery-ui.css">
+ 	<!-- Load local JavaScript. -->
+    <script src="script/jquery.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+	<script src="script/abay.js"></script>
+  </head>
+
+  <body>
+    <h1>aBay Online Auction</h1>
+	
+    <table>
+     <!--  <tr>
+        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
+      </tr>
+      <tr>
+        <td><a href="abay">ABay</a></td>        
+      </tr>-->
+      <tr>
+      <td>
+      	<button id="addItem" type="" title="Click to add a new item.">List an Item</button>       
+      </td>
+       <td>     
+        <button id="refreshList" type="" title="Click to refresh the list of items.">Refresh</button>
+      </td>
+      </tr>
+    </table>
+            
+    	<!-- Section for entering new item -->
+		<section id="itemNew">
+			<section>
+				 <table>
+			      <tr>
+			        <td width="33%" style="font-weight:bold;">Seller:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="seller"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>        
+			      </tr>
+			      <tr>
+			       <td width="33%" style="font-weight:bold;">Deadline:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="deadline"></td>  
+			        <td width="33%" style="font-weight:bold;">
+			        	<input id="hour" name="value">:
+			        	<input id="minutes" name="value">
+			        </td>  
+			      </tr>
+			       <tr>
+			        <td width="33%" style="font-weight:bold;">Title:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="title"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>        
+			      </tr>
+			       <tr>
+			        <td width="33%" style="font-weight:bold;">Starting price:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="stprice"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>  
+			      </tr>
+			      <tr>
+			       <td colspan="3" style="font-weight:bold;">Description:</td>  			       
+			      </tr>
+			      <tr>
+			       <td colspan="3" style="font-weight:bold;">
+			       		<textarea id="description" rows="5" cols="60" ></textarea>
+			       </td>  			       
+			      </tr>
+			    </table>																												
+			</section>						
+			
+			<!-- Buttons for saving/cancelling. -->
+			<section>
+				<button id="saveItem">List</button>
+				<button id="cancelItem">Cancel</button>
+			</section>
+			
+			</section>
+		
+		    <!-- Buttons for response of all items in a table. -->
+			<section id="response">
+				<table id="tblAllItems"></table>								
+			</section>
+			
+			<!-- Section for show details of item and bid-->
+		<section id="itemDetails">
+			<section id="secItemDetails">
+			   <section>
+				 <table>	
+				  <tr>				        		        
+			        <td width="33%" style="font-weight:bold;"></td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="idItem"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>        
+			      </tr>			  
+			      <tr>				        		        
+			        <td width="33%" style="font-weight:bold;">Seller:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="sellerB"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>        
+			      </tr>
+			      <tr>
+			       <td width="33%" style="font-weight:bold;">Deadline:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="deadlineB"></td>  
+			        <td width="33%" style="font-weight:bold;">
+			        	<input id="hourB" name="value">:
+			        	<input id="minutesB" name="value">
+			        </td>  
+			      </tr>
+			       <tr>
+			        <td width="33%" style="font-weight:bold;">Title:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="titleB"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>        
+			      </tr>
+			       <tr>
+			        <td width="33%" style="font-weight:bold;">Current price:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="currentPrice"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>  
+			      </tr>
+			       <tr>
+			        <td width="33%" style="font-weight:bold;">No of bid::</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="numBid"></td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="winner"></td>  
+			      </tr>
+			      <tr>
+			       <td colspan="3" style="font-weight:bold;">Description:</td>  			       
+			      </tr>
+			      <tr>
+			       <td colspan="3" style="font-weight:bold;">
+			       		<textarea id="descriptionB" rows="5" cols="60" ></textarea>
+			       </td>  			       
+			      </tr>
+			    </table>																												
+			</section>	
+			<section>
+				<button id="closeBid">Close</button>
+			</section>		
+			</section>	<!-- secItemDetails -->	
+									
+			<section id="bidDetails">
+			 <section>
+				 <table>							 
+			      <tr>				        		        
+			        <td width="33%" style="font-weight:bold;">Bidder:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="bidder"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>        
+			      </tr>
+			      <tr>
+			       <td width="33%" style="font-weight:bold;">Amount:</td>  
+			        <td width="33%" style="font-weight:bold;"><input type="text" id="amount"></td>  
+			        <td width="33%" style="font-weight:bold;"></td>  
+			      </tr>			      
+			    </table>																												
+			</section>	
+			<section>
+				<button id="placeBid">Place Bid<button>
+			</section>				
+			</section><!-- bidDetails -->
+		 </section><!-- itemDetails -->
+  </body>
+</html>

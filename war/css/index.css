@@ -1,0 +1,77 @@
+body, body table
+{
+font-family: Arial;
+font-size: 12pt;
+}
+button{
+	border-radius: 5px;
+	size:large;
+}
+#hour, #minutes, #hourB, #minutesB{
+	width:25px;
+}
+
+#itemDetails, #bidDetails
+{
+text-align: left;
+}
+
+#itemDetails section, #bidDetails section
+{
+padding: 5px;
+margin-bottom:5px;
+}
+
+#tblAllItems{	
+	border-collapse: collapse;
+	text-align: Center;
+}
+#tblAllItems th,#tblAllItems tr,#tblAllItems td {
+	border: 3px solid white;
+	padding:5px;
+}
+#secItemDetails, #bidDetails{
+	border: 1px solid LightGrey;
+}
+
+#tblAllItems td {
+	/*background-color: LightGray;*/
+}
+
+.selected{
+	color: green;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: black;
+    text-decoration: none;
+}
+/*.selected
+{
+color: #ff0000;
+font-weight: bold;
+}*/
+
+img
+{
+vertical-align: middle;
+}
